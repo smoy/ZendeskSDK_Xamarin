@@ -24,14 +24,15 @@ namespace ZendeskSDKExample
 
       // Try setting the SDK with your valid information
       // https://developer.zendesk.com/embeddables/docs/ios/gettingstarted
-      const string SampleApplicationId = "1e41a096a8cd8e009ea4fa";
-      const string SampleZendskUrl = "https://omniwear.zendesk.com";
-      const string SampleOAuthToken = "mobile_sdk_client_e1c4e6262f1d02f43496";
+
+      // Below values are from https://github.com/zendesk/sdk_demo_app_ios
+      // This is just so you can immediately play with the Xamarin example
+      const string SampleApplicationId = "e5dd7520b178e21212f5cc2751a28f4b5a7dc76698dc79bd";
+      const string SampleZendskUrl = "https://rememberthedate.zendesk.com";
+      const string SampleOAuthToken = "client_for_rtd_jwt_endpoint";
 
       ZDKConfig.Instance().InitializeWithAppId(SampleApplicationId, SampleZendskUrl, SampleOAuthToken);
-
       ZDKConfig.Instance().UserIdentity = new ZDKAnonymousIdentity();
-
 
       return true;
     }

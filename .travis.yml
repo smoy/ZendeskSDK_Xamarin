@@ -3,10 +3,13 @@ language: objective-c
 env:
   global:
     - MONO_VERSION=4.4.0
+    - XAMARIN_IOS_VERSION=9.6.2.4
  
 install:
   - wget "http://download.mono-project.com/archive/${MONO_VERSION}/macos-10-universal/MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.universal.pkg"
   - sudo installer -pkg "MonoFramework-MDK-${MONO_VERSION}.macos10.xamarin.universal.pkg" -target /
+  - wget "http://download.xamarin.com/MonoTouch/Mac/xamarin.ios-${XAMARIN_IOS_VERSION}.pkg"
+  - sudo installer -pkg "xamarin.ios-${XAMARIN_IOS_VERSION}.pkg" -target /
 
 script:
   - xbuild

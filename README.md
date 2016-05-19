@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/smoy/ZendeskSDK_Xamarin.png?branch=master)](https://travis-ci.org/smoy/ZendeskSDK_Xamarin)
+
+
 # ZendeskSDK_Xamarin
 Xamarin binding for the iOS Zendesk SDK
 

@@ -80,7 +80,14 @@ namespace ZendeskProviderSDK
   [BaseType(typeof(ZDKCoding))]
   public interface ZDKAnonymousIdentity : ZDKIdentity
   {
+    [Export ("name")]
+    string Name { get; set; }
 
+    [Export ("email")]
+    string Email { get; set; }
+
+    [Export ("externalId")]
+    string ExternalId { get; set; }
   }
 
   [BaseType(typeof(NSObject))]

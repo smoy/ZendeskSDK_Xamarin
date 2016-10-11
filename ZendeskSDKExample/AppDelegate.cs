@@ -32,7 +32,11 @@ namespace ZendeskSDKExample
       const string SampleOAuthToken = "client_for_rtd_jwt_endpoint";
 
       ZDKConfig.Instance().InitializeWithAppId(SampleApplicationId, SampleZendskUrl, SampleOAuthToken);
-      ZDKConfig.Instance().UserIdentity = new ZDKAnonymousIdentity();
+      var identity = new ZDKAnonymousIdentity ();
+      identity.Name = "John Doe";
+      identity.Email = "john@doe.com";
+      identity.ExternalId = "johndoe123";
+      ZDKConfig.Instance ().UserIdentity = identity;
 
       return true;
     }
